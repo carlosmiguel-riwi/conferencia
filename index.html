@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CONFERENCISTAS / Conoce a los expertos</title><script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+
+        .hexagon-avatar {
+            clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+            transition: all 0.4s ease;
+        }
+
+        .hexagon-container:hover .hexagon-avatar {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .speaker-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-8px);
+        }
+
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between">
+
+    <div class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white text-sm py-2 overflow-hidden shadow-md border-b border-red-500">
+        <div class="animate-marquee font-medium flex items-center space-x-8">
+            <span>Últimos cupos disponibles</span>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-12 flex-grow flex items-center justify-center">
+        <div class="w-full max-w-6xl bg-slate-50 rounded-2xl shadow-2xl border-t-4 border-red-600 p-6 md:p-10 relative overflow-hidden">
+            
+            <div class="flex items-center space-x-3 mb-10 pb-4 border-b border-slate-200">
+                <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white shadow-md transform -rotate-3 hover:rotate-0 transition-transform">
+                    <i class="fa-solid fa-user-gear text-lg"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    CONFERENCISTAS <p class="font-normal text-slate-500 text-xl md:text-2xl"> Conoce a los expertos</p>
+            </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-10">
+                
+                <div class="speaker-card bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-xl text-center flex flex-col justify-between group">
+                    <div>
+                        <div class="hexagon-container relative w-36 h-36 mx-auto mb-5 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-sky-400 to-blue-600 hexagon-avatar opacity-80 group-hover:opacity-100"></div>
+                            <img src="/home/cohorte8/Documents/Planteamiento de problema: Seccion de conferencia/img1.png" 
+                                 alt="Santiago Urango" 
+                                 class="w-[136px] h-[136px] object-cover hexagon-avatar relative z-10 p-1 bg-white">
+                        </div>
+
+                        <p class="text-lg font-bold text-slate-800 group-hover:text-red-600 transition-colors">Alejandro Morales</p>
+                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wider mb-3">Director de Contenido</p>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-6">
+                            Especializado en generar leads a través de estrategias de marketing de contenidos.
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center space-x-1.5 pt-3 border-t border-slate-100">
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-blue-700 hover:bg-blue-800 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="speaker-card bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-xl text-center flex flex-col justify-between group">
+                    <div>
+                        <div class="hexagon-container relative w-36 h-36 mx-auto mb-5 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-emerald-600 hexagon-avatar opacity-80 group-hover:opacity-100"></div>
+                            <img src="/home/cohorte8/Documents/Planteamiento de problema: Seccion de conferencia/img2.png" 
+                                 alt="Alexa Bedoya" 
+                                 class="w-[136px] h-[136px] object-cover hexagon-avatar relative z-10 p-1 bg-white">
+                        </div>
+
+                        <p class="text-lg font-bold text-slate-800 group-hover:text-red-600 transition-colors">Alexa Bedoya</p>
+                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wider mb-3">Fundadora</p>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-6">
+                            Experta en estrategia, innovacion y creacion de empresas
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center space-x-1.5 pt-3 border-t border-slate-100">
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-blue-700 hover:bg-blue-800 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="speaker-card bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-xl text-center flex flex-col justify-between group">
+                    <div>
+                        <div class="hexagon-container relative w-36 h-36 mx-auto mb-5 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-300 to-indigo-500 hexagon-avatar opacity-80 group-hover:opacity-100"></div>
+                            <img src="/home/cohorte8/Documents/Planteamiento de problema: Seccion de conferencia/img3.png" 
+                                 alt="Alexander Gil" 
+                                 class="w-[136px] h-[136px] object-cover hexagon-avatar relative z-10 p-1 bg-white">
+                        </div>
+
+                        <p class="text-lg font-bold text-slate-800 group-hover:text-red-600 transition-colors">Alexander Gil</p>
+                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wider mb-3">Influencer Marketing </p>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-6">
+                            Colaboraciones estratégicas con influencers para visibilidad de marcas.
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center space-x-1.5 pt-3 border-t border-slate-100">
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-blue-700 hover:bg-blue-800 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="speaker-card bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-xl text-center flex flex-col justify-between group">
+                    <div>
+                        <div class="hexagon-container relative w-36 h-36 mx-auto mb-5 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-slate-300 to-slate-500 hexagon-avatar opacity-80 group-hover:opacity-100"></div>
+                            <img src="/home/cohorte8/Documents/Planteamiento de problema: Seccion de conferencia/img4.png" 
+                                 alt="Carlos Martinez" 
+                                 class="w-[136px] h-[136px] object-cover hexagon-avatar relative z-10 p-1 bg-white">
+                        </div>
+
+                        <p class="text-lg font-bold text-slate-800 group-hover:text-red-600 transition-colors">Carlos Martinez</p>
+                        <p class="text-xs font-semibold text-red-600 uppercase tracking-wider mb-3">Desarrollador personal</p>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-6">
+                            Experto en desarollo, habilidades e impulso de carreras
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center space-x-1.5 pt-3 border-t border-slate-100">
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-red-500 hover:bg-red-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-blue-700 hover:bg-blue-800 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-7 h-7 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center text-xs transition-transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center pt-2">
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-lg hover:shadow-red-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center space-x-2 text-sm uppercase tracking-wider">
+                    <p>MÁS INFORMACIÓN</p>
+                </button>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
